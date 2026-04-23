@@ -74,7 +74,13 @@ export default function Home() {
       <nav className="absolute top-0 w-full z-50 px-4 sm:px-8 py-6 sm:py-8">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center gap-2 sm:gap-3">
-            <div className="w-8 h-8 bg-brand-600 rounded flex items-center justify-center text-white font-bold text-lg shrink-0">K</div>
+            <Image 
+              src="/assets/logo.png" 
+              alt="Kafoca Logo" 
+              width={40} 
+              height={40} 
+              className="w-10 h-10 object-contain"
+            />
             <h1 className="text-base sm:text-lg font-bold tracking-tight">
               Kafoca <span className="text-black/40">Mukuru</span>
             </h1>
@@ -124,7 +130,7 @@ export default function Home() {
               className="relative aspect-video sm:aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl shadow-black/5 order-1 lg:order-2"
             >
               <Image 
-                src="/images/hero.png" 
+                src="/assets/hero.png" 
                 alt="KAFOCA Premises" 
                 fill 
                 className="object-cover"
@@ -415,13 +421,76 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Life at Studyville Gallery */}
+      <section className="py-24 bg-gray-50 border-y border-black/5">
+        <div className="container mx-auto px-4 sm:px-8">
+          <div className="mb-16 text-center">
+            <h2 className="text-3xl font-bold mb-4 text-serif">Life at Studyville</h2>
+            <p className="text-sm text-black/60 font-medium">Building a community through shared experiences and quality care.</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="group relative aspect-square rounded-3xl overflow-hidden shadow-lg">
+              <Image 
+                src="/assets/tree_planting.png" 
+                alt="Tree Planting Event" 
+                fill 
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                <p className="text-white text-xs font-bold uppercase tracking-widest">Environmental Initiative</p>
+              </div>
+            </div>
+            <div className="group relative aspect-square rounded-3xl overflow-hidden shadow-lg lg:mt-8">
+              <Image 
+                src="/assets/residents_visiting_other_students.png" 
+                alt="Community Interaction" 
+                fill 
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                <p className="text-white text-xs font-bold uppercase tracking-widest">Student Community</p>
+              </div>
+            </div>
+            <div className="group relative aspect-square rounded-3xl overflow-hidden shadow-lg">
+              <Image 
+                src="/assets/food.png" 
+                alt="Quality Catering" 
+                fill 
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                <p className="text-white text-xs font-bold uppercase tracking-widest">Nutritious Meals</p>
+              </div>
+            </div>
+            <div className="group relative aspect-square rounded-3xl overflow-hidden shadow-lg lg:mt-8">
+              <Image 
+                src="/assets/kitchenstaff.png" 
+                alt="Our Dedicated Team" 
+                fill 
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                <p className="text-white text-xs font-bold uppercase tracking-widest">Professional Staff</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-white text-black py-20 border-t border-black/5">
         <div className="container mx-auto px-4 sm:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
             <div className="md:col-span-2">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-8 h-8 bg-black rounded flex items-center justify-center text-white font-bold text-lg">K</div>
+                <Image 
+                  src="/assets/logo.png" 
+                  alt="Kafoca Logo" 
+                  width={32} 
+                  height={32} 
+                  className="w-8 h-8 object-contain grayscale"
+                />
                 <h2 className="text-lg font-bold tracking-tight">Kafoca Mukuru</h2>
               </div>
               <p className="text-xs sm:text-sm text-black/60 max-w-sm leading-relaxed font-medium">
