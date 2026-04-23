@@ -4,12 +4,12 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { 
-  ShieldCheck, 
-  Wifi, 
-  BookOpen, 
-  Zap, 
-  MapPin, 
+import {
+  ShieldCheck,
+  Wifi,
+  BookOpen,
+  Zap,
+  MapPin,
   Phone,
   CheckCircle2,
   ArrowRight,
@@ -35,38 +35,7 @@ const fadeIn = {
 };
 
 export default function Home() {
-  const roomRates = [
-    { 
-      type: "Single Self Contained", 
-      price: "26,000",
-      desc: "Utmost privacy and comfort with a private sanctuary feel."
-    },
-    { 
-      type: "Single (Common Washroom)", 
-      price: "23,000",
-      desc: "Perfect balance between affordability and comfort."
-    },
-    { 
-      type: "2 Sharing", 
-      price: "20,000",
-      desc: "Perfect blend of companionship and privacy."
-    },
-    { 
-      type: "4 Sharing", 
-      price: "17,000",
-      desc: "Cost-effective solution without compromising comfort."
-    },
-    { 
-      type: "5 Sharing", 
-      price: "15,000",
-      desc: "Dynamic social space with essential amenities."
-    },
-    { 
-      type: "6 Sharing (Hall)", 
-      price: "13,000",
-      desc: "Unbeatable value for budget-conscious students."
-    },
-  ];
+
 
   return (
     <div className="min-h-screen bg-white text-black overflow-x-hidden font-sans selection:bg-brand-100 selection:text-brand-900">
@@ -74,19 +43,19 @@ export default function Home() {
       <nav className="absolute top-0 w-full z-50 px-4 sm:px-8 py-6 sm:py-8">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center gap-2 sm:gap-3">
-            <Image 
-              src="/assets/logo.png" 
-              alt="Kafoca Logo" 
-              width={40} 
-              height={40} 
+            <Image
+              src="/assets/logo.png"
+              alt="Kafoca Logo"
+              width={40}
+              height={40}
               className="w-10 h-10 object-contain"
             />
             <h1 className="text-base sm:text-lg font-bold tracking-tight">
-              Kafoca <span className="text-black/40">Mukuru</span>
+              Kafoca Mukuru <span className="text-black/40">Studyville</span>
             </h1>
           </div>
-          <Link 
-            href="/contact" 
+          <Link
+            href="/contact"
             className="text-xs font-bold border border-black/10 px-4 sm:px-6 py-2 rounded-full hover:bg-black hover:text-white transition-all"
           >
             Contact
@@ -112,27 +81,30 @@ export default function Home() {
                 <span className="text-black/30">Quality Living.</span>
               </h1>
               <p className="text-sm sm:text-base text-black/60 mb-8 leading-relaxed font-medium">
-                KAFOCA Mukuru Studyville is a premier student residence born from the partnership between 
-                <span className="text-black font-bold"> DEFOCA</span> and <span className="text-black font-bold">Mukuru Trust</span>. 
+                KAFOCA Mukuru Studyville is a premier student residence born from the partnership between
+                <span className="text-black font-bold"> DEFOCA</span> and <span className="text-black font-bold">Mukuru Trust</span>.
                 Providing secure, high-quality accommodation off Ole Sangale Road.
               </p>
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                <Link href="/contact" className="bg-black text-white px-8 py-3 rounded-full text-sm font-bold hover:bg-brand-600 transition-all flex items-center justify-center gap-2 group">
+                <Link
+                  href="/rooms"
+                  className="bg-black text-white px-8 py-3 rounded-full text-sm font-bold hover:bg-brand-600 transition-all flex items-center justify-center gap-2 group cursor-pointer"
+                >
                   Book Your Space <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6 }}
               className="relative aspect-video sm:aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl shadow-black/5 order-1 lg:order-2"
             >
-              <Image 
-                src="/assets/hero.png" 
-                alt="KAFOCA Premises" 
-                fill 
+              <Image
+                src="/assets/hero.png"
+                alt="KAFOCA Premises"
+                fill
                 className="object-cover"
                 priority
               />
@@ -171,7 +143,7 @@ export default function Home() {
                 KAFOCA Mukuru Studyville is a joint project of the <span className="text-black font-bold">Defence Forces Comrades Association (DEFOCA)</span> and <span className="text-black font-bold">Mukuru Trust</span>. Together, we blend military-grade discipline with charitable care to provide the best university student accommodation in Kenya.
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 gap-12">
               <div className="p-8 bg-white border border-black/5 rounded-2xl">
                 <h3 className="text-xs font-bold uppercase tracking-widest text-brand-600 mb-4">DEFOCA</h3>
@@ -218,7 +190,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-black text-white p-12 rounded-[2.5rem]">
               <h3 className="text-xs font-bold uppercase tracking-widest text-brand-400 mb-8">Core Values</h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-[10px] font-bold uppercase tracking-widest">
@@ -248,96 +220,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Accommodation Features */}
-      <section className="py-24 bg-gray-50 border-y border-black/5">
-        <div className="container mx-auto px-4 sm:px-8">
-          <div className="max-w-3xl mb-16">
-            <h2 className="text-3xl font-bold mb-6 text-serif">Accommodation Features</h2>
-            <p className="text-sm text-black/60 font-medium leading-relaxed">
-              Every resident enjoys a comprehensive suite of professional services and modern amenities designed for comfort and success.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-             {[
-               { icon: <Wifi />, label: "Free WIFI" },
-               { icon: <CheckCircle2 />, label: "Laundry" },
-               { icon: <Users />, label: "Mentorship" },
-               { icon: <UtensilsCrossed />, label: "Full Board" },
-               { icon: <Monitor />, label: "DSTV" },
-               { icon: <Waves />, label: "Instant Showers" },
-               { icon: <ShieldCheck />, label: "CCTV" },
-               { icon: <BookOpen />, label: "Study Room" }
-             ].map((feat, i) => (
-               <div key={i} className="flex flex-col items-center text-center group">
-                 <div className="w-12 h-12 rounded-full border border-black/5 flex items-center justify-center text-brand-600 mb-3 group-hover:bg-brand-600 group-hover:text-white transition-all">
-                   {feat.icon}
-                 </div>
-                 <span className="text-[10px] font-bold uppercase tracking-widest">{feat.label}</span>
-               </div>
-             ))}
-          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {roomRates.map((room, idx) => (
-              <div 
-                key={idx}
-                className="p-8 rounded-3xl border border-black/5 bg-white flex flex-col justify-between hover:shadow-xl hover:shadow-black/5 transition-all"
-              >
-                <div>
-                  <h3 className="text-lg font-bold text-black mb-2 text-serif">{room.type}</h3>
-                  <p className="text-xs text-black/60 mb-6 font-medium leading-relaxed">{room.desc}</p>
-                  <div className="flex items-baseline gap-1 mb-8">
-                    <span className="text-2xl font-bold text-black">KES {room.price}</span>
-                    <span className="text-[10px] font-bold text-black/30 uppercase tracking-wider">/ mo</span>
-                  </div>
-                </div>
-                <Link href="/contact" className="w-full py-3 bg-black text-white text-center rounded-xl text-xs font-bold uppercase tracking-widest hover:bg-brand-600 transition-all">
-                  Inquire Now
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Additional Services */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 sm:px-8">
-          <div className="mb-16">
-             <h2 className="text-3xl font-bold mb-4 text-serif">Additional Services</h2>
-             <p className="text-sm text-black/60 font-medium">Exceeding expectations through meticulous attention to detail.</p>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-            {[
-              { icon: <Briefcase />, title: "Grounds for Hire", desc: "Scenic spaces for events and picturesque settings." },
-              { icon: <Users />, title: "Conference Rooms", desc: "Elegant boardrooms for professional gatherings." },
-              { icon: <Coffee />, title: "Cafeteria", desc: "Delightful dining with diverse and fresh menus." },
-              { icon: <ShoppingBag />, title: "Tuck Shop", desc: "Convenient snacks and daily essentials." },
-              { icon: <Headphones />, title: "Customer Care", desc: "Prompt solutions and attentive service 24/7." },
-              { icon: <ShieldCheck />, title: "Tight Security", desc: "Full CCTV coverage and dedicated personnel." },
-              { icon: <Zap />, title: "Maintenance", desc: "Reliable and professional housekeeping services." },
-              { icon: <BookOpen />, title: "Study Rooms", desc: "Quiet spaces optimized for concentration." }
-            ].map((item, i) => (
-              <div key={i} className="space-y-3">
-                <div className="text-brand-600 [&>svg]:w-6 [&>svg]:h-6">{item.icon}</div>
-                <h4 className="text-xs font-bold uppercase tracking-widest">{item.title}</h4>
-                <p className="text-xs text-black/60 leading-relaxed font-medium">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Leadership / Directors */}
       <section className="py-24 bg-gray-50 border-y border-black/5">
         <div className="container mx-auto px-4 sm:px-8">
           <div className="mb-16 text-center">
-             <h2 className="text-3xl font-bold mb-4 text-serif">Board of Directors</h2>
-             <p className="text-xs font-bold text-black/40 uppercase tracking-widest">Distinguished Governance</p>
+            <h2 className="text-3xl font-bold mb-4 text-serif">Board of Directors</h2>
+            <p className="text-xs font-bold text-black/40 uppercase tracking-widest">Distinguished Governance</p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <h3 className="text-sm font-bold uppercase tracking-widest text-brand-600 mb-8 border-b border-black/5 pb-4">DEFOCA Directors</h3>
@@ -356,7 +248,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            
+
             <div>
               <h3 className="text-sm font-bold uppercase tracking-widest text-brand-600 mb-8 border-b border-black/5 pb-4">Mukuru Trust Directors</h3>
               <div className="space-y-4">
@@ -377,64 +269,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* The Management Team */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 sm:px-8">
-          <div className="max-w-2xl mb-16">
-            <h2 className="text-3xl font-bold mb-4 text-serif">The Management Team</h2>
-            <p className="text-sm text-black/60 font-medium">Experts in their fields, driven and committed to exceeding expectations.</p>
-          </div>
-
-          <div className="space-y-12">
-            {[
-              { 
-                role: "Chief Executive Officer", 
-                quote: "Welcome to KAFOCA Mukuru Studyville! We provide accommodation and catering services as curators of growth—actively supporting the personal aspirations of our residents." 
-              },
-              { 
-                role: "Finance & Administration Manager", 
-                quote: "We prioritize your comfort and satisfaction. Our dedicated team is committed to ensuring your stay is both pleasant and memorable." 
-              },
-              { 
-                role: "Catering Manager", 
-                quote: "KAFOCA–Mukuru Studyville is a home away from home. We offer a balanced diet and delicious meals for both residents and external customers." 
-              },
-              { 
-                role: "Operation & Marketing Manager", 
-                quote: "We remain focused on providing dignified accommodation and catering, effectively engaging our audience while upholding the highest standards." 
-              },
-              { 
-                role: "Accommodation Manager", 
-                quote: "Our separate male and female halls ensure quality comfort. We offer housekeeping, ample water, weekly laundry, and top-notch security with CCTV surveillance." 
-              }
-            ].map((member, i) => (
-              <div key={i} className="grid md:grid-cols-3 gap-8 items-start border-b border-black/5 pb-12 last:border-0">
-                <div className="md:col-span-1">
-                  <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-brand-600">{member.role}</h4>
-                </div>
-                <div className="md:col-span-2">
-                  <p className="text-sm italic text-black/60 font-medium leading-relaxed font-serif">"{member.quote}"</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Life at Studyville Gallery */}
-      <section className="py-24 bg-gray-50 border-y border-black/5">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-8">
           <div className="mb-16 text-center">
             <h2 className="text-3xl font-bold mb-4 text-serif">Life at Studyville</h2>
             <p className="text-sm text-black/60 font-medium">Building a community through shared experiences and quality care.</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="group relative aspect-square rounded-3xl overflow-hidden shadow-lg">
-              <Image 
-                src="/assets/tree_planting.png" 
-                alt="Tree Planting Event" 
-                fill 
+              <Image
+                src="/assets/tree_planting.png"
+                alt="Tree Planting Event"
+                fill
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
@@ -442,10 +290,10 @@ export default function Home() {
               </div>
             </div>
             <div className="group relative aspect-square rounded-3xl overflow-hidden shadow-lg lg:mt-8">
-              <Image 
-                src="/assets/residents_visiting_other_students.png" 
-                alt="Community Interaction" 
-                fill 
+              <Image
+                src="/assets/residents_visiting_other_students.png"
+                alt="Community Interaction"
+                fill
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
@@ -453,10 +301,10 @@ export default function Home() {
               </div>
             </div>
             <div className="group relative aspect-square rounded-3xl overflow-hidden shadow-lg">
-              <Image 
-                src="/assets/food.png" 
-                alt="Quality Catering" 
-                fill 
+              <Image
+                src="/assets/food.png"
+                alt="Quality Catering"
+                fill
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
@@ -464,10 +312,10 @@ export default function Home() {
               </div>
             </div>
             <div className="group relative aspect-square rounded-3xl overflow-hidden shadow-lg lg:mt-8">
-              <Image 
-                src="/assets/kitchenstaff.png" 
-                alt="Our Dedicated Team" 
-                fill 
+              <Image
+                src="/assets/kitchenstaff.png"
+                alt="Our Dedicated Team"
+                fill
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
@@ -484,21 +332,21 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
             <div className="md:col-span-2">
               <div className="flex items-center gap-3 mb-6">
-                <Image 
-                  src="/assets/logo.png" 
-                  alt="Kafoca Logo" 
-                  width={32} 
-                  height={32} 
+                <Image
+                  src="/assets/logo.png"
+                  alt="Kafoca Logo"
+                  width={32}
+                  height={32}
                   className="w-8 h-8 object-contain grayscale"
                 />
-                <h2 className="text-lg font-bold tracking-tight">Kafoca Mukuru</h2>
+                <h2 className="text-lg font-bold tracking-tight">Kafoca Mukuru Studyville</h2>
               </div>
               <p className="text-xs sm:text-sm text-black/60 max-w-sm leading-relaxed font-medium">
-                Premier student residence at Madaraka Shopping Center. 
+                Premier student residence at Madaraka Shopping Center.
                 Designed for the ambitious student. Open Monday to Sunday, 08:00 AM — 05:00 PM.
               </p>
             </div>
-            
+
             <div>
               <h3 className="text-[10px] font-bold uppercase tracking-widest text-black/30 mb-6">Address</h3>
               <div className="flex items-start gap-3 text-xs sm:text-sm font-bold">
@@ -529,12 +377,14 @@ export default function Home() {
               </div>
             </div>
           </div>
-          
+
           <div className="pt-8 border-t border-black/5 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
             <p className="text-[8px] sm:text-[10px] text-black/40 font-bold uppercase tracking-widest">© 2026 KAFOCA Mukuru Studyville</p>
             <div className="flex gap-6 text-[8px] sm:text-[10px] text-black/40 font-bold uppercase tracking-widest">
-              <Link href="#" className="hover:text-black">Privacy</Link>
-              <Link href="#" className="hover:text-black">Terms</Link>
+              <a href="https://www.instagram.com/kafocamukurustudyville/" target="_blank" className="hover:text-black">Instagram</a>
+              <a href="https://www.facebook.com/kafoca" target="_blank" className="hover:text-black">Facebook</a>
+              <a href="https://x.com/DStudyville" target="_blank" className="hover:text-black">X</a>
+              <a href="https://www.tiktok.com/@kafocamukuru" target="_blank" className="hover:text-black">TikTok</a>
             </div>
           </div>
         </div>
