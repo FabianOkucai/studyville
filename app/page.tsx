@@ -58,7 +58,7 @@ export default function Home() {
             href="/contact"
             className="text-xs font-bold border border-black/10 px-4 sm:px-6 py-2 rounded-full hover:bg-black hover:text-white transition-all"
           >
-            Contact
+            Get in Touch
           </Link>
         </div>
       </nav>
@@ -322,6 +322,56 @@ export default function Home() {
                 <p className="text-white text-xs font-bold uppercase tracking-widest">Professional Staff</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-8">
+          <div className="mb-16 text-center">
+            <h2 className="text-3xl font-bold mb-4 text-serif">Voices of Our Residents</h2>
+            <p className="text-sm text-black/60 font-medium">Hear from the students who call KAFOCA Mukuru Studyville home.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                quote: "The environment here is perfectly suited for academic excellence. The quiet study rooms and fast internet have been a game changer for my grades.",
+                author: "Sarah J.",
+                school: "Strathmore University"
+              },
+              {
+                quote: "Security was my parents' main concern, but at KAFOCA, we feel completely safe. The staff is professional and always ready to help.",
+                author: "Kevin M.",
+                school: "University of Nairobi"
+              },
+              {
+                quote: "Living here feels like being part of a big family. The mentorship programs and community events make student life so much more fulfilling.",
+                author: "Faith K.",
+                school: "Daystar University"
+              }
+            ].map((t, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="p-10 bg-white border border-black/5 rounded-[2rem] shadow-sm hover:shadow-xl hover:shadow-black/5 transition-all"
+              >
+                <div className="mb-6 text-brand-600">
+                   {[...Array(5)].map((_, i) => (
+                     <span key={i} className="text-lg">★</span>
+                   ))}
+                </div>
+                <p className="text-sm italic text-black/70 mb-8 leading-relaxed font-serif">"{t.quote}"</p>
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-widest">{t.author}</p>
+                  <p className="text-[10px] font-medium text-black/30 uppercase tracking-widest">{t.school}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

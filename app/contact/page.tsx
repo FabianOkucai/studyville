@@ -41,12 +41,7 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-4xl mx-auto"
           >
-            <div className="mb-12 sm:mb-16">
-              <h1 className="text-3xl sm:text-4xl font-bold mb-4">Get in Touch</h1>
-              <p className="text-xs sm:text-sm text-black/60 font-medium max-w-lg">
-                Reach out directly for bookings and tours. We're located at Madaraka Shopping Center, Nairobi.
-              </p>
-            </div>
+
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 sm:gap-16 mb-16 sm:mb-20">
               {/* Contact Info */}
